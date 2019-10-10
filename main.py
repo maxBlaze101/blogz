@@ -54,14 +54,11 @@ def blog_posts():
         posts = Blog.query.filter_by(owner=owner).all()
         return render_template('singleUser.html', posts=posts, username=username)
 
-
         # user_post = User.query.get(params2)
         # blog_post=Blog.query.order_by(Blog.id.desc()).all()
         # for post in blog_post:
         #     if post.owner_id == user_post.id:
                 
-        
-
 @app.route('/newpost', methods=['GET','POST'])
 def new_post():
     if request.method == 'POST':
